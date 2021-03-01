@@ -13,12 +13,13 @@ def example1(p):
 	K_n = np.zeros(len(sample_sizes))
 	for _ in tqdm.trange(nb_iters_for_p):
 		n_iters_for_weigths = int(1e3)
-		w = p * (1 - p) ** (np.arange(0, n_iters_for_weigths))  # np.zeros(n_iters_for_weigths)
+		# w = p * (1 - p) ** (np.arange(0, n_iters_for_weigths))  # np.zeros(n_iters_for_weigths)
 
 		x = []
 		y = []
 
-		sample = np.random.choice(range(n_iters_for_weigths), size=sample_sizes[-1], p=w / (np.sum(w)))
+		sample = np.random.geometric(p,
+		                             size=sample_sizes[-1])
 		for size in sample_sizes:
 			sub_sample = sample[0:size]
 			x.append(len(sub_sample))
@@ -55,4 +56,4 @@ def example1(p):
 	plt.legend()
 	plt.show()
 
-example1(.25)
+example1(.1)
