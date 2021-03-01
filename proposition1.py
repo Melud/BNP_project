@@ -10,7 +10,7 @@ def proposition1():
 	range_sizes = np.array(1.5 ** np.arange(5, 30)).astype(int)
 	K_n = np.zeros(len(range_sizes))
 	for _ in range(nb_iters_for_p):
-		p = np.random.uniform()  # 1e-1  # np.random.uniform()
+        p = np.random.uniform()  # 1e-1  # np.random.uniform()
 		print(f"p={p}")
 		size_sample = int(1e6)
 		n_iters_for_weigths = int(1e3)
