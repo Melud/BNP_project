@@ -9,7 +9,7 @@ def proposition1():
 	:return:
 	"""
 	nb_iters_for_p = int(50)
-	sample_sizes = np.array(1.5 ** np.arange(5, 35, 3)).astype(int)
+	sample_sizes = np.array(1.5 ** np.arange(5, 35, 1)).astype(int)
 	K_n = np.zeros(len(sample_sizes))
 	for _ in tqdm.trange(nb_iters_for_p):
 		p = np.random.uniform()

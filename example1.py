@@ -3,13 +3,14 @@ import matplotlib.pyplot as plt
 import tqdm
 from sklearn.linear_model import LinearRegression
 
+
 def example1(p):
 	"""
 	tester une  valeur de p et moyenner
 	:return:
 	"""
 	nb_iters_for_p = int(20)
-	sample_sizes = np.array(1.5 ** np.arange(5, 35, 3)).astype(int)
+	sample_sizes = np.array(1.5 ** np.arange(5, 35, 1)).astype(int)
 	K_n = np.zeros(len(sample_sizes))
 	for _ in tqdm.trange(nb_iters_for_p):
 		n_iters_for_weigths = int(1e3)
@@ -33,7 +34,7 @@ def example1(p):
 	print(f"K_n=\n{K_n}")
 	avg_K_n = np.mean(K_n, axis=0)
 
-	reg = LinearRegression().fit(np.log(sample_sizes).reshape(len(sample_sizes),1),
+	reg = LinearRegression().fit(np.log(sample_sizes).reshape(len(sample_sizes), 1),
 	                             (avg_K_n))
 	m = reg.coef_[0]
 	b = reg.intercept_
@@ -47,8 +48,8 @@ def example1(p):
 	         alpha=.9
 	         )
 	plt.plot(sample_sizes,
-	         m*np.log(sample_sizes)+b,
-	         label=f"{m:.3f}*x (predicted {abs(np.log(1-p))**-1:.3f})",
+	         m * np.log(sample_sizes) + b,
+	         label=f"{m:.3f}*x (predicted {abs(np.log(1 - p)) ** -1:.3f})",
 	         alpha=.7
 	         )
 	plt.xlabel("$log(n)$")
@@ -56,4 +57,5 @@ def example1(p):
 	plt.legend()
 	plt.show()
 
-example1(.1)
+
+example1(np.random.uniform())
