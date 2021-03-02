@@ -44,16 +44,17 @@ def example1(p):
 	plt.plot(sample_sizes,
 	         avg_K_n,
 	         ".-",
-	         label="K_n moyen",
+	         label=f"$K_n$ (averaged {nb_iters_for_p} times)",
 	         alpha=.9
 	         )
 	plt.plot(sample_sizes,
 	         m * np.log(sample_sizes) + b,
-	         label=f"{m:.3f}*x (predicted {abs(np.log(1 - p)) ** -1:.3f})",
+	         label=f"{m:.3f}*x (predicted 1/log(1-p)={abs(np.log(1 - p)) ** -1:.3f})",
 	         alpha=.7
 	         )
 	plt.xlabel("$log(n)$")
 	plt.ylabel("$K_n$")
+	plt.title(f"$K_n$ with $p={p:.3f}$ ")
 	plt.legend()
 	plt.show()
 
