@@ -1,5 +1,5 @@
 # BNP project
- Projet pour le cours de *Bayesian non parametrics*.
+ Projet pour le cours de *Bayesian non parametrics*, sur l’article https://arxiv.org/abs/2101.07607
 
 ## Instructions
 Chaque courbe est obtenue par un fichier **Python**.
