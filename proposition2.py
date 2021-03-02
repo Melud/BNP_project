@@ -29,7 +29,8 @@ def theorical_asymp(n_power_max):
 			1 + np.log(2)) * np.log(range_sizes))
 
 
-K_n, range_sizes = prop2(100, 30, 10 ** 5)
+n_sample_for_p = 1000
+K_n, range_sizes = prop2(n_sample_for_p, 30, 10 ** 5)
 K_n = K_n.mean(axis=0)
 # range_sizes = np.array(1.5 ** np.arange(3, 30)).astype(int)
 plt.figure()
@@ -38,7 +39,7 @@ plt.plot(
 	np.log(np.log(range_sizes)),
 	np.log(K_n),
 	"-.",
-	label="$K_n$"
+	label="$K_n$ moyen"
 )
 
 reg = LinearRegression().fit(
@@ -47,6 +48,10 @@ reg = LinearRegression().fit(
 )
 m = reg.coef_[0]
 b = reg.intercept_
+
+plt.title(f"$K_n$ moyenné pour {n_sample_for_p} valeurs de p  ")
+plt.xlabel("$log(log(n))$")
+plt.ylabel("$log(K_n)$")
 
 plt.plot(
 	np.log(np.log(range_sizes)),

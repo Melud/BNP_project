@@ -22,7 +22,7 @@ def proposition1():
 	nb_iters_for_p = int(5e3)
 	ls_p = np.random.uniform(size=nb_iters_for_p)
 
-	sample_sizes = np.array(1.5 ** np.arange(7, 25, 1)).astype(int)
+	sample_sizes = np.array(1.5 ** np.arange(12, 25, 1)).astype(int)
 
 	K_n = np.zeros((nb_iters_for_p, len(sample_sizes)))
 	for i in tqdm.trange(nb_iters_for_p):
