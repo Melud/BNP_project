@@ -1,6 +1,7 @@
 # BNP project
  Projet pour le cours de *Bayesian non parametrics*, sur l’article https://arxiv.org/abs/2101.07607
 
+Le fichier [report.pdf](report.pdf) constitue notre rapport pour ce projet.
 ## Instructions
 Chaque courbe est obtenue par un fichier **Python**.
 
