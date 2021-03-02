@@ -8,7 +8,9 @@ Par exemple, pour obtenir les tracés correspondant à l’exemple 1, on exécut
     
     example1.py
 
-les bibliothèques utilisées sont les suivantes
+
+### Bibliothèques utilisées
+Nous utilisons les bibliothèques suivantes :
     
     numpy
     matplotlib.pyplot

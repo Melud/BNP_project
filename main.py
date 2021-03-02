@@ -7,7 +7,7 @@ from proposition1 import *
 # 	p = np.exp(-X)
 
 def main():
-	proposition1()
+	# proposition1()
 	return
 
 
