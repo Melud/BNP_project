@@ -5,11 +5,10 @@ de Pierpaolo De Blasi, Ramsés H. Mena, Igor Prünster.
 
 Le fichier [report.pdf](report.pdf) constitue notre rapport pour ce projet.
 ## Instructions
-Chaque courbe est obtenue par un fichier **Python**.
+Chaque courbe est obtenue par un fichier **Python** se situant dans le répertoire ```code```.
 
 Par exemple, pour obtenir les tracés correspondant à l’exemple 1, on exécute le fichier
-    
-    example1.py
+```example1.py```.
 
 
 ### Bibliothèques utilisées
