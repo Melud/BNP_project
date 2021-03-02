@@ -66,49 +66,5 @@ def proposition1():
 	plt.show()
 
 
-def proposition1_option2():
-	"""
-	tester plein de valeurs de p *autrement*
-	 puis moyenner les K_n ?
-	:return:
-	"""
-	sample_sizes = np.array(1.5 ** np.arange(10, 35, 1)).astype(int)
-	ls_p = np.random.uniform(size=sample_sizes[-1])
-
-	x = []
-
-	for i in tqdm.trange(sample_sizes[-1]):
-		x.append(np.random.geometric(ls_p[i],
-		                             size=1))
-	K_n = []
-	for size in sample_sizes:
-		K_n.append(len(np.unique(x[0:size])))
-	print(f"K_n=\n{K_n}")
-
-	print("OPTION 2 FINIE")
-
-	reg = LinearRegression().fit(np.log(np.log(sample_sizes)).reshape(-1, 1),
-	                             np.log(K_n))
-	m = reg.coef_[0]
-	b = reg.intercept_
-
-	plt.plot(np.log(np.log(sample_sizes)),
-	         np.log(K_n),
-	         ".-",
-	         label="K_n moyen",
-	         alpha=.9
-	         )
-	plt.plot(np.log(np.log(sample_sizes)),
-	         m * np.log(np.log(sample_sizes)) + b,
-	         # label=f"{m:.3f}*x (predicted {abs(np.log(1-p))**-1:.3f})",
-	         label=f"${m:.2f}x$ (pente attendue : 2)",
-	         alpha=.7
-	         )
-	plt.xlabel("$log(log(n))$")
-	plt.ylabel("$log(K_n)$")
-	plt.legend()
-	plt.show()
-
-
 proposition1()
 # proposition1_option2()
