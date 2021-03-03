@@ -19,6 +19,6 @@ Nous utilisons les bibliothèques suivantes :
     sklearn.linear_model
     tqdm
 
-À noter qu’on peut parfaitement se passer de tqdm,
+À noter qu’on peut parfaitement se passer de ```tqdm```,
 c’est simplement pour avoir une barre de progression
 sur les itérations réalisées.
