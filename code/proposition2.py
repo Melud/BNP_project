@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar  1 15:25:53 2021
-
-@author: DORON
-"""
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
