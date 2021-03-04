@@ -20,7 +20,7 @@ def theorical_asymp(n_power_max):
 		range_sizes) ** 2)
 
 
-m = 2
+m = 5
 
 n_sample_for_p = 1000
 K_n, range_sizes = proposition2(m, 30, n_sample_for_p)
@@ -37,8 +37,9 @@ K_n = K_n.mean(axis=0)
 plt.plot(
 	np.log(np.log(range_sizes)),
 	np.log(K_n),
-	"-.",
-	label="$K_n$ moyen"
+	".-",
+	label="$K_n$ moyen",
+	alpha=.9
 )
 
 reg = LinearRegression().fit(
@@ -56,6 +57,7 @@ plt.plot(
 	np.log(np.log(range_sizes)),
 	a * np.log(np.log(range_sizes)) + b,
 	label=f"${a:.2f}x$ (predicted ${m + 2}x$)",
+	alpha=.7
 )
 plt.legend()
 plt.show()

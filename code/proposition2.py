@@ -32,8 +32,9 @@ plt.figure()
 plt.plot(
 	np.log(np.log(range_sizes)),
 	np.log(K_n),
-	"-.",
-	label="$K_n$ moyen"
+	".-",
+	label="$K_n$ moyen",
+	alpha=.9
 )
 
 reg = LinearRegression().fit(
@@ -51,6 +52,7 @@ plt.plot(
 	np.log(np.log(range_sizes)),
 	m * np.log(np.log(range_sizes)) + b,
 	label=f"${m:.2f}x$ (predicted $2x$)",
+	alpha=.7
 )
 # plt.semilogy(range_sizes, K_n, '-.', label="K_n")
 # plt.semilogy(range_sizes, theorical_asymp(30), '-.', label="Théorie")
