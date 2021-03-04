@@ -3,7 +3,8 @@
  [Asymptotic behavior of the number of distinct values in a sample from the geometric stick-breaking process](https://arxiv.org/abs/2101.07607)
 de Pierpaolo De Blasi, Ramsés H. Mena, Igor Prünster.
 
-Le fichier [report.pdf](report.pdf) constitue notre rapport pour ce projet.
+Le fichier [report.pdf](https://github.com/Manu0225/BNP_project/releases/download/v1.0/project.pdf) 
+disponible dans la section *Releases* constitue notre rapport pour ce projet.
 ## Instructions
 Chaque courbe est obtenue par un fichier **Python** se situant dans le répertoire ```code```.
 
