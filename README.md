@@ -5,7 +5,7 @@ de Pierpaolo De Blasi, Ramsés H. Mena, Igor Prünster.
 
 ## Rapport
 Le fichier [report.pdf](https://github.com/Manu0225/BNP_project/releases/download/v1.0/project.pdf) 
-disponible dans la section *Releases* constitue notre rapport pour ce projet.
+ constitue notre rapport pour ce projet.
 ## Instructions
 Chaque courbe est obtenue par un fichier **Python** se situant dans le répertoire ```code```.
 
